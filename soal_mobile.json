@@ -1,0 +1,28 @@
+{
+  "item": [
+    {
+      "employeeid": "1",
+      "nama": "roro",
+      "email": "roro@gmail.com",
+      "password": "12345",
+      "handphone": "087777777",
+      "position": "admin"
+    },
+    {
+      "employeeid": "2",
+      "nama": "riri",
+      "email": "riri@gmail.com",
+      "password": "12345",
+      "handphone": "089999999",
+      "position": "kasir"
+    },
+    {
+      "employeeid": "3",
+      "nama": "rere",
+      "email": "rere@gmail.com",
+      "password": "12345",
+      "handphone": "086666666",
+      "position": "chef"
+    }
+  ]
+}
