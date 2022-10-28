@@ -1,6 +1,6 @@
 # LKS_Kab_Mobile_2021
 
-LKS IT Software Solution for Business (Soal Mobile) Kabupaten Purbalingga 2021 (untuk latihan saya mengikuti LKS 2022)
+LKS IT Software Solution for Business (Soal Mobile) Kabupaten Purbalingga 2021
 
 Soal : https://drive.google.com/file/d/1y2djE8g2oiEL2Dt8T5Ye4xN4BneKBBus/view?usp=sharing
 > **Catatan** 
