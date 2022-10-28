@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         fetchAPI()
-//        parseJSON(jsonString)
         val listView : ListView = binding.listView
         val adapter = EmpAdapter(this, parseJSON(jsonString))
         listView.adapter = adapter
@@ -31,17 +30,15 @@ class MainActivity : AppCompatActivity() {
     }
     fun fetchAPI() = runBlocking{
         launch(Dispatchers.IO) {
-            val conn = URL("https://raw.githubusercontent.com/dffrndik/LKS_Kab_Mobile_2021/main/soal_mobile.json").openConnection() as HttpURLConnection
+            val conn = URL("https://raw.githubusercontent.com/dffrndik/LKS_Kab_Mobile_2021_/master/soal_mobile.json").openConnection() as HttpURLConnection
             val data = conn.inputStream.bufferedReader().readText()
             jsonString = data
         }
     }
-    //: MutableList<EmpModel>
     fun parseJSON(jsonString : String): MutableList<EmpModel> {
         val jsonObject = JSONObject(jsonString)
         val jsonArray = jsonObject.getJSONArray("item")
         val list : MutableList<EmpModel> = mutableListOf()
-        Log.d(TAG, "parseJSON: =============${jsonArray}")
         for (i in 0 until jsonArray.length()){
             val jsonOutputObject = jsonArray.getJSONObject(i)
             list.add( EmpModel(
@@ -49,7 +46,6 @@ class MainActivity : AppCompatActivity() {
                 jsonOutputObject.getString("nama"),
                 jsonOutputObject.getString("position"),
             ))
-            Log.d(TAG, "parseJSON: ${jsonOutputObject.getString("nama")}")
         }
         return list
     }
