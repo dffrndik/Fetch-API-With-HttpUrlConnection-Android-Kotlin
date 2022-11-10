@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun fetchAPI() = runBlocking{
         launch(Dispatchers.IO) {
-            val conn = URL("https://raw.githubusercontent.com/dffrndik/LKS_Kab_Mobile_2021_/master/soal_mobile.json").openConnection() as HttpURLConnection
+            val conn = URL("https://raw.githubusercontent.com/dffrndik/Fetch-API-With-HttpUrlConnection-Android-Kotlin/master/soal_mobile.json").openConnection() as HttpURLConnection
             val data = conn.inputStream.bufferedReader().readText()
             jsonString = data
         }
